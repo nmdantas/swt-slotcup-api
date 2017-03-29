@@ -1,0 +1,22 @@
+{
+  "name": "swt-app-slot-cup",
+  "version": "0.0.0",
+  "description": "Competições",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nmdantas/swt-app-slot-cup.git"
+  },
+  "author": "Nicholas M. Dantas",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/nmdantas/swt-app-slot-cup/issues"
+  },
+  "homepage": "https://github.com/nmdantas/swt-app-slot-cup#readme",
+  "dependencies": {
+    "swt-user-manager": "git+https://e8c7eab2825e7ff05108bbb1c84fdafbebf8b4b8:x-oauth-basic@github.com/nmdantas/swt-user-manager.git"
+  }
+}
