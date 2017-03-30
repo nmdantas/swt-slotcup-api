@@ -17,6 +17,7 @@ var bodyParser  = require('body-parser');
 var compression = require('compression');
 var framework   = require('swt-framework');
 var userManager = require('swt-user-manager');
+var resultController = require('./controllers/result');
 
 var app = express();
 
@@ -27,7 +28,9 @@ app.use(framework.security.accessControl.enablePreflight);
 app.use(framework.security.accessControl.checkAuthorization);
 
 // Rotas
-app.use('/api/v0/users', userManager.controllers.user);
+//app.use('/api/v0/users', userManager.controllers.user);
+
+app.use('/api/v0/results', resultController);
 
 // Middleware de erro
 app.use(framework.middlewares.log);
