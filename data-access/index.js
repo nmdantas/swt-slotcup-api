@@ -11,7 +11,7 @@
  * Module dependencies.
  */
 var database    = require('mysql');
-var userService = require('./result');
+var resultService = require('./result');
 
 const CONNECTION_CONFIG = {
     connectionLimit : process.env.DB_POOL_LIMIT,
