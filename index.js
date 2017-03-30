@@ -23,9 +23,9 @@ var app = express();
 
 app.use(bodyParser.json());
 app.use(compression());
-app.use(framework.security.accessControl.enablePreflight);
+app.use(framework.security.enablePreflight);
 // Verificacoes no Header Authorization
-app.use(framework.security.accessControl.checkAuthorization);
+app.use(framework.security.checkAuthorization);
 
 // Rotas
 //app.use('/api/v0/users', userManager.controllers.user);
@@ -33,7 +33,7 @@ app.use(framework.security.accessControl.checkAuthorization);
 app.use('/api/v0/results', resultController);
 
 // Middleware de erro
-app.use(framework.middlewares.log);
+app.use(framework.logger.middleware);
 
 // Rota default
 app.get('/', function(req, res) {
