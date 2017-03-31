@@ -73,6 +73,10 @@ function positionCategorieCup(req, res, next) {
             results: result
         };
 
+        if(result.length > 0 ) {
+            formattedResponse.campeonato = result[0].Campeonato;
+        }
+
         res.json(formattedResponse);
 
         next();
