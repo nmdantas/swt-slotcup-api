@@ -11,7 +11,9 @@ var router      = require('express').Router();
 var business    = require('./../business/result');
 var framework   = require('swt-framework');
 
-// Login
-router.get('/allCup/:cupId', business.classificacaoCampeonatoEquipe);
+// Results
+router.get('/positionTeamCup/:cupId', business.positionTeamCup);
+router.get('/positionCategorieCup/:cupId', business.positionCategorieCup);
+router.get('/positionRaces/:cupId', business.positionRaces);
 
 module.exports = router;
