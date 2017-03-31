@@ -23,6 +23,15 @@ var app = express();
 
 app.use(bodyParser.json());
 app.use(compression());
+
+// Rota default
+app.all('/', function(req, res) {
+    res.json({
+        api: process.env.APPLICATION_NAME,
+        version: process.env.APPLICATION_VERSION
+    });
+});
+
 app.use(framework.security.enablePreflight);
 // Verificacoes no Header Authorization
 app.use(framework.security.checkAuthorization);
@@ -34,14 +43,6 @@ app.use('/api/v0/results', resultController);
 
 // Middleware de erro
 app.use(framework.logger.middleware);
-
-// Rota default
-app.get('/', function(req, res) {
-    res.json({
-        api: process.env.APPLICATION_NAME,
-        version: process.env.APPLICATION_VERSION
-    });
-});
 
 // Inicia o servidor
 app.listen(PORT);
