@@ -1,2 +1,2 @@
-# swt-app-slop-cup
+# swt-slopcup-api
 Gestão de Competições de Autorama
